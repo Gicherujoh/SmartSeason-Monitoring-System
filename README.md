@@ -34,7 +34,7 @@ Built to demonstrate system design, role-based access control, and practical bus
 
 ### 1. Clone Repository
 ```bash
-   1 git clone your repository
+   1 git clone https://github.com/Gicherujoh/SmartSeason-Monitoring-System
 
 ### 2. Backend Setup
      cd smartseason-backend
