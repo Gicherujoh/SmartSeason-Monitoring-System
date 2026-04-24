@@ -39,15 +39,6 @@ Built to demonstrate system design, role-based access control, and practical bus
 ### 2. Backend Setup
      cd smartseason-backend
      npm install.   
-
-     Create .env file: 
-          PORT=5000
-          DB_NAME=smartseason
-          DB_USER=root
-          DB_PASSWORD=yourpassword
-          DB_HOST=localhost
-          JWT_SECRET=secret123.  
-
       Run backend: npm start;
 
 ### 3.Frontend Setup
@@ -77,4 +68,5 @@ Built to demonstrate system design, role-based access control, and practical bus
       Agent:
         email: agent@test.com
         password: 123456
-   https://smart-season-monitoring-system.vercel.app/
+
+  Live Demo:  https://smart-season-monitoring-system.vercel.app/
