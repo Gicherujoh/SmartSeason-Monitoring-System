@@ -16,12 +16,12 @@ export default function AdminDashboard() {
 
   const navigate = useNavigate();
 
-  // 📡 Fetch fields
+  //  Fetch fields
   const fetchFields = async () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/fields", {
+      const res = await fetch("https://smartseason-monitoring-system-1.onrender.com/api/fields", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -34,7 +34,7 @@ export default function AdminDashboard() {
     }
   };
 
-  // 👨‍🌾 Fetch agents for dropdown
+  //  Fetch agents for dropdown
   const fetchAgents = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
     }
   };
 
-  // 📊 Stats
+  //  Stats
   const total = fields.length;
   const active = fields.filter((f) => f.stage === "Growing").length;
   const atRisk = fields.filter((f) => f.stage === "Planted").length;
@@ -120,14 +120,14 @@ export default function AdminDashboard() {
       <div className="admin-container">
         <h1>Admin Dashboard</h1>
 
-        {/* 📊 STATS */}
+        {/*  STATS */}
         <div className="summary-grid">
           <div className="card">Total Fields: {total}</div>
           <div className="card">Active: {active}</div>
           <div className="card">At Risk: {atRisk}</div>
         </div>
 
-        {/* 🧾 CREATE FIELD FORM */}
+        {/*  CREATE FIELD FORM */}
         <div className="card">
           <h2>Create Field</h2>
 

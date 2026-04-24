@@ -12,7 +12,7 @@ export default function AgentDashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/fields", {
+      const res = await fetch("https://smartseason-monitoring-system-1.onrender.com/api/fields", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -35,12 +35,12 @@ export default function AgentDashboard() {
     }
   }, []);
 
-  // 🔄 Update field stage
+  //  Update field stage
   const updateStage = async (id, stage) => {
     try {
       const token = localStorage.getItem("token");
 
-      await fetch(`http://localhost:5000/api/fields/${id}`, {
+      await fetch(`https://smartseason-monitoring-system-1.onrender.com/api/fields/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

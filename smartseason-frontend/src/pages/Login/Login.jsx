@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://smartseason-monitoring-system-1.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,11 +27,11 @@ export default function Login() {
         return;
       }
 
-      // ✅ store token + role
+      //  store token + role
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.role);
 
-      // ✅ redirect
+      //  redirect
       if (data.role === "admin") {
         navigate("/admin");
       } else {

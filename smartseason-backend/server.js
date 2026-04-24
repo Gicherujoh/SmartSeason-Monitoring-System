@@ -23,10 +23,10 @@ app.use("/api/fields", fieldRoutes);
 async function testDB() {
   try {
     const connection = await db.getConnection();
-    console.log("✅ MySQL Connected");
+    console.log("MySQL Connected");
     connection.release();
   } catch (err) {
-    console.error("❌ DB Connection Failed:", err.message);
+    console.error(" DB Connection Failed:", err.message);
   }
 }
 
@@ -49,7 +49,7 @@ async function seedUsers() {
       ["Agent", "agent@test.com", hashed, "agent"]
     );
 
-    console.log("🌱 Users seeded");
+    console.log(" Users seeded");
   } catch (err) {
     console.error("Seed error:", err.message);
   }
@@ -59,7 +59,7 @@ async function seedUsers() {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, async () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(` Server running on port ${PORT}`);
 
   await testDB();
   await seedUsers();
