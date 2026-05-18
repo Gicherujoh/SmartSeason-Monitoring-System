@@ -21,7 +21,7 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("https://smartseason-monitoring-system-1.onrender.com/api/fields", {
+      const res = await fetch("http://localhost:5000/api/fields", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
